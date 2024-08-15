@@ -22,7 +22,7 @@ func main() {
 	ctx := context.Background()
 
 	pool, err := pgxpool.New(ctx, fmt.Sprintf(
-		"user=%s password=%s host=%s port=%s dbname=%s",
+		"user=%s password=%s host=%s port=%s dbname=%s sslmode=disable",
 		os.Getenv("WSRS_DATABASE_USER"),
 		os.Getenv("WSRS_DATABASE_PASSWORD"),
 		os.Getenv("WSRS_DATABASE_HOST"),
